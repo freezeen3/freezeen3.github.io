@@ -1,3 +1,3 @@
-# freezee3.github.io
+# freezeen3.github.io
 Credit to awsomeguy563
 My website :)
