@@ -1,2 +1,3 @@
-# awsomeguy563.github.io
+# freezee3.github.io
+Credit to awsomeguy563
 My website :)
