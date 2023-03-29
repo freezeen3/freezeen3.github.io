@@ -1,0 +1,9 @@
+# Site settings
+title: Great New Personal Website of Sam
+author:
+  name: Yuyan Sam
+  email: your-email@domain.com
+description: "Great site about Sam"
+
+# Build settings
+remote_theme: jekyll/minima
