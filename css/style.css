@@ -23,18 +23,40 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 3em;
 }
-p {
+h2 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-
+    font-size: 2em;
+    font-weight: lighter;
+    color: #999;
 }
-ul {
+
+
+p, select, #result {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+container {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+
+ul, dt {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+}
+dd {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.1em;
+    font-weight: lighter;
+    color: #999;
 }
 footer {
     border-top: 1px solid #d5d5d5;

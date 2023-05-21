@@ -13,25 +13,53 @@
         <li class="navbar-item"><a class="navbar-link" href="index.html">About Me</a></li>
         <li class="navbar-item"><a class="navbar-link" href="dataanal.html">Data Analysis</a></li>
         <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li>
-        <!-- <li style="float:right"><a class="active" href="#about">About</a></li> -->
       </ul>
     </div>
   </nav>
 
-</body>
 
 
-<body>
+  <h1>What do you wish to test?</h1>
 
-<h2>Statistical Tests</h2>
+  <container id="outer">
+    <label for="outer-dropdown">Problem:</label>
+    <select id="outer-dropdown">
+      <option value="">Select an option</option>
+      <option value="oo1">Equality of proportion to some value</option>
+      <option value="oo2">Equality of two proportions</option>
+      <option value="oo3">Change in proportion before and after treatment of same subjects</option>
+      <option value="oo4">Equality of distribution/median of two variables</option>
+    </select>
+  </container>
 
-<h3>What kind of problem you wish to test? </h3>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-See test</button>
+  <container id="innerc">
+    <label for="inner-dropdown">Inner Option:</label>
+    <select id="inner-dropdown">
+      <option value="">Select an option</option>
+      <option value="innerOption1">Inner Option 1</option>
+      <option value="innerOption2">Inner Option 2</option>
+      <option value="innerOption3">Inner Option 3</option>
+    </select>
+  </container>
 
-<p id="demo"></p>
+  <container id="innerc2">
+    <label for="inner-dropdown2">Inner 2 Option:</label>
+    <select id="inner-dropdown2">
+      <option value="">Select an option</option>
+      <option value="innerOption1">Inner Option 1</option>
+      <option value="innerOption2">Inner Option 2</option>
+      <option value="innerOption3">Inner Option 3</option>
+    </select>
+  </container>
+
+  <br><br><br>
+  <div id="result"></div>
+
+
+  <script src="stattest.js"></script>
+
+
 
 </body>
 </html>
