@@ -38,6 +38,12 @@ p, select, #result {
     color: #333;
 }
 
+quote {
+    font-family: 'Times New Roman';
+    font-size: 1em;
+    color: #333;
+}
+
 container {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size: 1.2em;
