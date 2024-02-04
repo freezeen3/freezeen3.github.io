@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="index.html">About Me</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="dataanal.html">Data Analysis</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-
-  <nav class="navbar">
-
-    <div class="container">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link" href="index.html">About Me</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="dataanal.html">Data Analysis</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-<h1>Past Projects</h1>
-
-
-<!-- <ul>
-  <li>Music Generation</li>
-  <li>Big Two</li>
-  <li>Camera Calibration and Epipolar Line Generation</li>
-  <li>ML in Archaeology</li>
-</ul> -->
-
-<dl>
-    <dt>Machine Learning in Archaeology</dt>
-    <dd>
-      <img src="images/mlarchaeo.png" alt="ML in Archaeology" style="max-width: 50%; height: auto;" /> <br>
-
-      Handling of large quantities of excavated pottery sherd data from Ararat, Armenia. <br>
-      Involves image processing stage that includes color calibration, geometric calibration and cropping
-      of desired parts followed by machine learning stage to classify the processed images into useful categories.
-    </dd>
-    <br>
-
-    <dt>Camera Calibration and Epipolar Line Generation</dt>
-    <dd>
-      <img src="images/calib.png" alt="Camera Calibration" style="max-width: 30%; height: auto;" />
-      <img src="images/epipolar.png" alt="Epipolar Line" style="max-width: 40%; height: auto;" /> <br>
-      Corner detection of calibration cards. 2D-2D perspective transformation, then 2D-3D projective calibration.
-      Essential matrix computed to retrieve epipolar lines.</dd>
-    <br>
-
-    <dt>AI Music Generation</dt>
-    <dd>Trained from numerous midi music tracks from video games. LSTMs to learn the dependency and logistic regression to allow mood control of music to be generated.</dd>
-    <br>
-
-    <dt>Big Two</dt>
-    <dd>
-      <img src="images/bigtwo.png" alt="Big Two Java Game" style="max-width: 45%; height: auto;" /> <br>
-      Poker card game made in Java. Follows the rule of Big Two in which face value 2 is the strongest. <br>
-      Supports multiplayer.
-    </dd>
-</dl>
+    <h1>Past Projects</h1>
 
 
+    <dl>
+      <dt>Machine Learning in Archaeology</dt>
+      <dd>
+        <img
+          src="images/mlarchaeo.png"
+          alt="ML in Archaeology"
+          style="max-width: 50%; height: auto"
+        />
+        <br />
 
+        Handling of large quantities of excavated pottery sherd data from
+        Ararat, Armenia. <br />
+        Involves image processing stage that includes color calibration,
+        geometric calibration and cropping of desired parts followed by machine
+        learning stage to classify the processed images into useful categories.
+      </dd>
+      <br />
 
-</body>
+      <dt>Camera Calibration and Epipolar Line Generation</dt>
+      <dd>
+        <img
+          src="images/calib.png"
+          alt="Camera Calibration"
+          style="max-width: 30%; height: auto"
+        />
+        <img
+          src="images/epipolar.png"
+          alt="Epipolar Line"
+          style="max-width: 40%; height: auto"
+        />
+        <br />
+        Corner detection of calibration cards. 2D-2D perspective transformation,
+        then 2D-3D projective calibration. Essential matrix computed to retrieve
+        epipolar lines.
+      </dd>
+      <br />
+
+      <dt>AI Music Generation</dt>
+      <dd>
+        Trained from numerous midi music tracks from video games. LSTMs to learn
+        the dependency and logistic regression to allow mood control of music to
+        be generated.
+      </dd>
+      <br />
+
+      <dt>Big Two</dt>
+      <dd>
+        <img
+          src="images/bigtwo.png"
+          alt="Big Two Java Game"
+          style="max-width: 45%; height: auto"
+        />
+        <br />
+        Poker card game made in Java. Follows the rule of Big Two in which face
+        value 2 is the strongest. <br />
+        Supports multiplayer.
+      </dd>
+    </dl>
+  </body>
 </html>
