@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 5
 title: Blog
 nav_title: Blog
 layout: blog_home

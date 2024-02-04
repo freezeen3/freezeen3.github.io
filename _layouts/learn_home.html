@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{{content}}
+
+<ul class="notes">
+  {% for note in site.notes %}
+  <li>
+    <a href="{{note.url}}">{{note.title}}</a>
+  </li>
+  {% endfor %}
+</ul>

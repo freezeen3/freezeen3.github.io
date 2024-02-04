@@ -1,2 +1,6 @@
 name: Sam's Jekyll Website
 title: SAM WEBSITE
+collections:
+  notes:
+    output: true
+markdown: kramdown

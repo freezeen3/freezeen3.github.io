@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{{content}}
+
+<ul class="note_sections">
+  {% for note in site.notes %}
+  <li>
+    <a href="{{note_section.url}}">{{note_section.summary_title}}</a>
+  </li>
+  {% endfor %}
+</ul>
