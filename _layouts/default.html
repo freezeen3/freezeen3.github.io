@@ -8,25 +8,6 @@
   <nav class="navbar">
     <div class="container">
       <ul class="navbar-list">
-        <li class="navbar-item">
-          <a class="navbar-link" href="/index.html">About Me</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" href="/dataanal.html">Data Analysis</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" href="/projects.html">Projects</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" href="/blog.html">Blog</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <nav class="navbar">
-    <div class="container">
-      <ul class="navbar-list">
         {% assign mypages = site.pages | sort: "order" %} {% for page in mypages
         %}
         <li class="navbar-item">
