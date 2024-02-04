@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-list">
+      {% assign mypages = site.pages | sort: "order" %} {% for page in mypages
+      %}
+      <li class="navbar-item">
+        <a class="navbar-link" href="{{page.url | absolute_url}}"
+          >{{page.nav_title}}</a
+        >
+        {% endfor %}
+      </li>
+    </ul>
+  </div>
+</nav>
