@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <title>{{ page.nav_title }} | {{ site.title }}</title>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="/index.html">About Me</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="/dataanal.html">Data Analysis</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="/blog.html">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        {% assign mypages = site.pages | sort: "order" %} {% for page in mypages
+        %}
+        <li class="navbar-item">
+          <a class="navbar-link" href="{{page.url | absolute_url}}"
+            >{{page.nav_title}}</a
+          >
+          {% endfor %}
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>{{ page.title }}</h1>
+
+  <body>
+    {{ content }}
+  </body>
+</html>
