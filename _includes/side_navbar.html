@@ -1,0 +1,51 @@
+<!-- Careful: Place at the end for the "note_sections > li" structure to be created in DOM first -->
+<div class="side_nav">
+  <ul>
+    {% for note_section in site.note_sections %} {% if
+    note_section.relative_path contains topic %}
+    <li>
+      <a href="#{{note_section.section_title | slugify}}"
+        >{{note_section.section_title}}</a
+      >
+      <ul
+        class="subsections"
+        id="subsections-{{note_section.section_title | slugify}}"
+      ></ul>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>
+
+<!-- Constructs subsection nested lists in side nav bar -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find all note sections
+    document
+      .querySelectorAll(".note_sections > li")
+      .forEach(function (section) {
+        // For each section, find all H2 elements
+        section.querySelectorAll("h2").forEach(function (h2) {
+          // Get the ID and text content of each H2 to use as link target and text
+          const id = h2.id;
+          const text = h2.textContent;
+
+          // Create a new list item and link for the subsection
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = "#" + id;
+          a.textContent = text;
+          li.appendChild(a);
+
+          const sectionId = section.id;
+          const subsectionsUl = document.querySelector(
+            `#subsections-${sectionId}`
+          );
+
+          // Append the new list item to the side navigation
+          if (subsectionsUl) {
+            subsectionsUl.appendChild(li);
+          }
+        });
+      });
+  });
+</script>

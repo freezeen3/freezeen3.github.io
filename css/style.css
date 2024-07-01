@@ -1,79 +1,115 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+  margin: 60px auto;
+  width: 70%;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+nav ul,
+footer ul {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  padding: 0px;
+  list-style: none;
+  font-weight: bold;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+nav ul li,
+footer ul li {
+  display: inline;
+  margin-right: 20px;
 }
+
+.side_nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  height: 50%;
+  overflow-y: auto; /* Enables scrolling for the navigation if it's taller than the viewport */
+  background-color: transparent;
+  padding: 10px; /* Optional: adds some padding inside the navigation */
+}
+
+.side_nav ul.subsections {
+  padding-left: 20px; /* Adjust as needed for indentation */
+}
+
+/* Adjust the main content container, example */
+.main-content {
+  margin-right: 220px; /* Adjust this value to be slightly more than the .side_nav width */
+}
+
 a {
-    text-decoration: none;
-    color: #999;
+  text-decoration: none;
+  color: #999;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 h1 {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 3em;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 3em;
 }
 h2 {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 2em;
-    font-weight: lighter;
-    color: #999;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.7em;
+  font-weight: lighter;
+  color: #999;
+}
+h3 {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.2em;
+  color: #9a8a8a;
+}
+summary {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 2em;
+  font-weight: bold;
+  color: #424141;
 }
 
-
-p, select, #result {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.2em;
-    line-height: 1.4em;
-    color: #333;
+p,
+select,
+#result,
+details {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1em;
+  line-height: 1.4em;
+  color: #333;
 }
 
 quote {
-    font-family: 'Times New Roman';
-    font-size: 1em;
-    color: #333;
+  font-family: "Times New Roman";
+  font-size: 1em;
+  color: #333;
 }
 
 container {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.2em;
-    line-height: 1.4em;
-    color: #333;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #333;
 }
 
-
-ul, dt {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+ul,
+dt {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1em;
+  line-height: 1.4em;
+  color: #333;
 }
 dd {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 1.1em;
-    font-weight: lighter;
-    color: #999;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  font-size: 1.1em;
+  font-weight: lighter;
+  color: #999;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  border-top: 1px solid #d5d5d5;
+  font-size: 0.8em;
 }
 
 ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+  margin: 20px auto 40px;
+  font-size: 1.5em;
 }
 
 ul.posts li {
-    list-style: none;
+  list-style: none;
 }

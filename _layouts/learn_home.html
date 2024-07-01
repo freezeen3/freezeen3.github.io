@@ -6,8 +6,11 @@ layout: default
 
 <ul class="notes">
   {% for note in site.notes %}
+  {% assign path_parts = note.path | split: '/' %}
+  {% if path_parts.size <= 2 %}
   <li>
     <a href="{{note.url}}">{{note.title}}</a>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>

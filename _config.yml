@@ -3,4 +3,6 @@ title: SAM WEBSITE
 collections:
   notes:
     output: true
+  note_sections:
+    output: true
 markdown: kramdown
