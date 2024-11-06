@@ -63,6 +63,9 @@ summary {
   font-weight: bold;
   color: #424141;
 }
+.small-summary {
+  font-size: 1em;
+}
 
 p,
 select,
