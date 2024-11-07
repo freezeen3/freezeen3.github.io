@@ -102,8 +102,90 @@ Given prime $p$
 
 $a^{p-1} = 1 \mod p$
 
+### Modulo Inequality Lemma
+
+Given $\gcd(a, n)=1$,  $i \neq j$ and $i \lt j \lt n$, then
+
+$ia \neq ja \mod n$
+
+Since assume the contrary $ia = ja \mod n \Rightarrow a(j-i) = 0 \mod n$
+
+$\Rightarrow n \mid (j-i)$ as $n \nmid a$. But $n > (j-i) > 0$ which means $n$ cannot divide $(j-i)$ (can imagine a 1D number line).
+
+<details>
+<summary class="small-summary">Interesting trick to prove:</summary>
+
+Idea: equate two sets of cardinality $p-1$, multiply elements within each set, multiply inverse of factorial to both sides
+
+TODO: Combinatorial proof
+
+Consider the set $\mathbb{Z}_p^{*} = \{1, 2, ..., p-1 \}: \gcd(k, p)=1$ where $p$ is prime and $k \in \mathbb{Z}_p^{*}$
+
+By the Modulo Inequality Lemma, $ai \neq aj \mod n$ for any $i, j \in \mathbb{Z}_p^{*}$
+
+Then we have the set $\{a \mod p, 2a \mod p, ..., (p-1)a \mod p \}$ where each element is distinct and each is coprime with $p$, with cardinality is $p-1$.
+This must mean the set is equal to $\mathbb{Z}_p^{*}$, multiplying elements within each set and equating:
+
+$1 \cdot 2 \cdot ... \cdot (p-1) \mod p = a^{p-1} 1 \cdot 2 \cdot ... \cdot (p-1) \mod p$
+
+$(p-1)! \mod p = a^{p-1} (p-1)! \mod p$
+
+Since $\gcd(p, (p-1)!) = 1$, inverse $(p-1)!^{-1} \mod p$ exists and we multiply both sides by this inverse to get
+
+$a^{p-1} = 1 \mod p$
+
+</details>
+
 ## Euler's Theorem
 
+### Euler's Totient
+Number of integers smaller than and coprime with $n$
+
+For prime $p$, $\phi(p) = p-1$
+
+For $n=pq$ where $p, q$ are prime, $\phi(n) = (p-1)(q-1)$
+
+### The Theorem
 Given $\gcd(a, n) = 1$,
 
 $a^{\phi(n)} = 1 \mod n$
+
+
+
+It is in fact a more general case of FLT
+
+<details>
+<summary class="small-summary">The proof is also similar to FLT's:</summary>
+
+Idea: equate to sets, multiply elements within each, multiply inverse to both sides.
+
+Consider the set $\{k_1, k_2, ..., k_{\phi(n)} \}: \gcd(n, k_i)=1, 1 \leq k_i \leq n$ 
+
+$k_1 \cdot k_2 \cdot ... \cdot k_{\phi(n)} = a^{\phi(n)} k_1 \cdot k_2 \cdot ... \cdot k_{\phi(n)} \mod n$
+</details>
+
+### Euler's Theorem Corollary
+
+$a^{\phi(n)+1} \mod n = a \mod n$
+
+
+## Chinese Remainder Theorem
+Given pair-wise coprime positive integers $n_1, n_2, ..., n_k$
+
+One can find a unique solution $x$ modulo $n_1n_2...n_x$ to
+
+$x = a_1 \mod n_1$
+
+...
+
+$x = a_x \mod n_x$
+
+which is an integer that has remainders a's when divided by each n
+
+$n_1 \mid (x-a_1)$
+
+$n_2 \mid (x-a_2)$
+
+...
+
+$n_x \mid (x-a_x)$
