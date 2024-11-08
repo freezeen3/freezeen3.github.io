@@ -172,20 +172,92 @@ $a^{\phi(n)+1} \mod n = a \mod n$
 ## Chinese Remainder Theorem
 Given pair-wise coprime positive integers $n_1, n_2, ..., n_k$
 
-One can find a unique solution $x$ modulo $n_1n_2...n_x$ to
+One can find a *unique* solution $x$ modulo $n_1n_2...n_x$ to
 
-$x = a_1 \mod n_1$
+$x \mod n_1 = a_1 \mod n_1$
+
+$x \mod n_2 = a_2 \mod n_2$
 
 ...
 
-$x = a_x \mod n_x$
+$x \mod n_x = a_x \mod n_x$
 
 which is an integer that has remainders a's when divided by each n
 
-$n_1 \mid (x-a_1)$
+Closed-form solution: $x=[\sum_{i=1}^k a_i M_i(M_i^{-1} \mod n)] \mod M$ where $M=n_1n_2...n_k, M_i = \frac{M}{n_i}$
 
-$n_2 \mid (x-a_2)$
+### Application example
 
-...
+In RSA, three users encrypt message $m$ with their own modulo $n_1, n_2, n_3$ and exponent $3$.
+Their ciphertexts $(c_i = m^3 \mod n_i)$ are intercepted, can $m$ be retrieved?
 
-$n_x \mid (x-a_x)$
+Solve for $x \mod n_1n_2n_3$
+
+$x \mod n_1 = m^3 \mod n_1$
+
+$x \mod n_2 = m^3 \mod n_2$
+
+$x \mod n_3 = m^3 \mod n_3$
+
+$x = m^3 \Rightarrow m = x^{\frac{1}{3}}$
+
+
+## Groups, Rings and Fields
+
+### Groups
+A group $\{G, *\}$ has the properties
+
+G1. Closure: For any $a, b \in G$, $a*b \in G$
+
+G2. Associativity: $a*(b*c) = (a*b)*c$
+
+G3. Identity: $\exists \, e \in G: \, a*e=e*a=1$
+
+G4. Inverse: $\exists \, a^{-1} \in G: \, a^{-1}*a=1$ 
+
+#### Abelian Groups
+An abelian group satisfies G1-G4 and:
+
+G5. Commutativity: $a*b=b*a$
+
+Notations:
+- Binary operation: $+$
+- Identity element: $0$
+- Inverse of $a$: $-a$
+
+#### Cyclic Groups
+A cyclic group satisfies G1-G4 and:
+
+G6. Cyclicity: every element in $G$ can be expressed as $g^k$ for some integer $k$, $g$ is generator of $G$
+
+### Rings
+A ring $\{R, +, *\}$ has two binary operations $+$ and $*$, and satisfies:
+
+R1. Abelian Group: satisfies G1-G5
+
+R2. Multiplicative Closure: For any $a, b \in R$, $a*b \in R$
+
+R3. Multiplicative Associativity: $a*(b*c) = (a*b)*c$
+
+R4. Distributivity: $(a+b)*c = a*c + b*c$
+
+#### Commutative Rings
+Satisfies R1-R4, and
+
+R5. Multiplicative commutativity: $a*b=b*a$
+
+#### Integral Domain
+A commutative ring is also an integral domain if it satisfies R1-R5 and
+
+R6. Multiplicative Identity: $a*1=1*a=a$
+
+R7. No zero divisor: $a*b=0 \Rightarrow a=0 \text{ or } b=0$
+
+### Fields
+A field $\{F,+,*\}$ satisfies
+
+F1. Integral Domain: R1-R7
+
+F2. Multiplicative Inverse: $a*a^{-1}=a^{-1}*a=1$
+
+## Polynomial Arithmetic & Fast Muliplication
