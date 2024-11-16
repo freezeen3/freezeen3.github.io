@@ -84,6 +84,7 @@ $2 = 2(1)$
 Then backward sub
 
 $1 = 3 - 2 = 3 - (5-3) = 2(3) - 5 = 2(23-4(5)) - 5 = 2(23) - 9(5)$
+
 $ = 2(23) - 9(28-23) = 11(23) - 9(28) = 11(51-28) - 9(28) = 11(51) - 20(28)$
 
 
@@ -233,7 +234,7 @@ G6. Cyclicity: every element in $G$ can be expressed as $g^k$ for some integer $
 ### Rings
 A ring $\{R, +, *\}$ has two binary operations $+$ and $*$, and satisfies:
 
-R1. Abelian Group: satisfies G1-G5
+R1. Abelian Group w.r.t. $+$: satisfies G1-G5
 
 R2. Multiplicative Closure: For any $a, b \in R$, $a*b \in R$
 
@@ -260,4 +261,28 @@ F1. Integral Domain: R1-R7
 
 F2. Multiplicative Inverse: $a*a^{-1}=a^{-1}*a=1$
 
+In other words, a field has
+- multiplicative: closure, associativity, identity, inverse, commutativity &rarr; abelian group w.r.t. $*$
+- addition: closure, associativity, identity, inverse, commutativity &rarr; abelian group w.r.t. $+$
+- distributivity, no zero divisor, 
+
+
 ## Polynomial Arithmetic & Fast Muliplication
+
+### Irreducibility
+A polynomial $f(x)$ over field $F$ is irreducible iff it cannot be factored into two polynomials with degrees less than $f(x)$'s
+
+### Finite Field of Order $p$
+For prime $p$, the set $\mathbb{Z}_p = \{0, 1, ..., p-1\}$ with its arithmetic operations $\mod p$ form the *finite field of order $p$* denoted by $GF(p)$
+
+A finite field of order $p^n$ has polynomials of degrees $\leq n$ over $GF(p)$, having the form $\sum_{i=0}^{n-1} a_i x^i$ where $a_i \in \mathbb{Z}_p$.
+
+Additions and subtractions performed coefficientwise modulo $p$, multiplication also coefficientwise mod $p$, but it is then divided by the irreducible $p(x)$ of degree $n$.
+
+If $x=2$, each coefficient can be represented in bits form $(a_{n-1}...a_1a_0)$, and coefficientwise mod $p$ is mod $2$, basically doing XOR.
+
+
+### Fast Multiplication
+In $GF(2^n)$ with $p(x)$ having $\deg n$, 
+
+$x^n \mod p(x) = p(x)-x^n$
