@@ -120,12 +120,12 @@ Idea: equate two sets of cardinality $p-1$, multiply elements within each set, m
 
 TODO: Combinatorial proof
 
-Consider the set $\mathbb{Z}_p^{*} = \{1, 2, ..., p-1 \}: \gcd(k, p)=1$ where $p$ is prime and $k \in \mathbb{Z}_p^{*}$
+Consider the set $\mathbb{Z}_p^{\ast } = \{1, 2, ..., p-1 \}: \gcd(k, p)=1$ where $p$ is prime and $k \in \mathbb{Z}_p^{\ast }$
 
-By the Modulo Inequality Lemma, $ai \neq aj \mod n$ for any $i, j \in \mathbb{Z}_p^{*}$
+By the Modulo Inequality Lemma, $ai \neq aj \mod n$ for any $i, j \in \mathbb{Z}_p^{\ast }$
 
 Then we have the set $\{a \mod p, 2a \mod p, ..., (p-1)a \mod p \}$ where each element is distinct and each is coprime with $p$, with cardinality is $p-1$.
-This must mean the set is equal to $\mathbb{Z}_p^{*}$, multiplying elements within each set and equating:
+This must mean the set is equal to $\mathbb{Z}_p^{\ast }$, multiplying elements within each set and equating:
 
 $1 \cdot 2 \cdot ... \cdot (p-1) \mod p = a^{p-1} 1 \cdot 2 \cdot ... \cdot (p-1) \mod p$
 
@@ -206,20 +206,20 @@ $x = m^3 \Rightarrow m = x^{\frac{1}{3}}$
 ## Groups, Rings and Fields
 
 ### Groups
-A group $\{G, *\}$ has the properties
+A group $\{G, \ast \}$ has the properties
 
-G1. Closure: For any $a, b \in G$, $a*b \in G$
+G1. Closure: For any $a, b \in G$, $a\ast b \in G$
 
-G2. Associativity: $a*(b*c) = (a*b)*c$
+G2. Associativity: $a\ast (b\ast c) = (a\ast b)\ast c$
 
-G3. Identity: $\exists \, e \in G: \, a*e=e*a=1$
+G3. Identity: $\exists \, e \in G: \, a\ast e=e\ast a=1$
 
-G4. Inverse: $\exists \, a^{-1} \in G: \, a^{-1}*a=1$ 
+G4. Inverse: $\exists \, a^{-1} \in G: \, a^{-1}\ast a=1$ 
 
 #### Abelian Groups
 An abelian group satisfies G1-G4 and:
 
-G5. Commutativity: $a*b=b*a$
+G5. Commutativity: $a\ast b=b\ast a$
 
 Notations:
 - Binary operation: $+$
@@ -232,37 +232,37 @@ A cyclic group satisfies G1-G4 and:
 G6. Cyclicity: every element in $G$ can be expressed as $g^k$ for some integer $k$, $g$ is generator of $G$
 
 ### Rings
-A ring $\{R, +, *\}$ has two binary operations $+$ and $*$, and satisfies:
+A ring $\{R, +, \ast\}$ has two binary operations $+$ and $\ast$, and satisfies:
 
 R1. Abelian Group w.r.t. $+$: satisfies G1-G5
 
-R2. Multiplicative Closure: For any $a, b \in R$, $a*b \in R$
+R2. Multiplicative Closure: For any $a, b \in R$, $a\ast b \in R$
 
-R3. Multiplicative Associativity: $a*(b*c) = (a*b)*c$
+R3. Multiplicative Associativity: $a\ast (b\ast c) = (a\ast b)\ast c$
 
-R4. Distributivity: $(a+b)*c = a*c + b*c$
+R4. Distributivity: $(a+b)\ast c = a\ast c + b\ast c$
 
 #### Commutative Rings
 Satisfies R1-R4, and
 
-R5. Multiplicative commutativity: $a*b=b*a$
+R5. Multiplicative commutativity: $a \ast b=b \ast a$
 
 #### Integral Domain
 A commutative ring is also an integral domain if it satisfies R1-R5 and
 
-R6. Multiplicative Identity: $a*1=1*a=a$
+R6. Multiplicative Identity: $a \ast 1=1 \ast a=a$
 
-R7. No zero divisor: $a*b=0 \Rightarrow a=0 \text{ or } b=0$
+R7. No zero divisor: $a \ast b=0 \Rightarrow a=0 \text{ or } b=0$
 
 ### Fields
-A field $\{F,+,*\}$ satisfies
+A field $\{F,+,\ast\}$ satisfies
 
 F1. Integral Domain: R1-R7
 
-F2. Multiplicative Inverse: $a*a^{-1}=a^{-1}*a=1$
+F2. Multiplicative Inverse: $a \ast a^{-1}=a^{-1} \ast a=1$
 
 In other words, a field has
-- multiplicative: closure, associativity, identity, inverse, commutativity &rarr; abelian group w.r.t. $*$
+- multiplicative: closure, associativity, identity, inverse, commutativity &rarr; abelian group w.r.t. $\ast $
 - addition: closure, associativity, identity, inverse, commutativity &rarr; abelian group w.r.t. $+$
 - distributivity, no zero divisor, 
 
