@@ -8,6 +8,7 @@ Topics include
 - Fermat's Little Theorem
 - Euler's Theorem
 - Chinese Remainder Theorem
+- Lattice & Partial Ordering
 
 ## Modular Inverse
 Given $\gcd(a, n)=1$, if $ab=1 \mod n$, then $b=a^{-1} \mod n$ is the modular multiplicative inverse of $a$ modulo $n$.
@@ -286,3 +287,9 @@ If $x=2$, each coefficient can be represented in bits form $(a_{n-1}...a_1a_0)$,
 In $GF(2^n)$ with $p(x)$ having $\deg n$, 
 
 $x^n \mod p(x) = p(x)-x^n$
+
+TODO: understand better from lecture
+
+
+## Partial Orders
+
